@@ -1,0 +1,10 @@
+<% if !user_signed_in? %>
+	<br/><br/>
+	Welcome to the world of commercial videos.<br>
+	<%= link_to('Register', new_user_registration_path)  %> / <%= link_to('login', new_user_session_path)  %> and upload your videos. We will convert them into shoppable/usable.
+
+<% else %>
+	Logged in. <br/>
+	upload your videos/photos.
+<% end %>
+
