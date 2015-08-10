@@ -50,6 +50,10 @@ gem 'devise'
 gem "therubyracer"
 gem 'twitter-bootstrap-rails'
 
+
 #gem 'activeadmin', github:'activeadmin'
 gem 'rails_12factor'
 #gem 'simple_form'
+
+gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
+

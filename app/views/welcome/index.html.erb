@@ -5,6 +5,22 @@
 
 <% else %>
 	Logged in. <br/>
-	upload your videos/photos.
+	upload your video/photos to make it shoppable. <br/><br/>
+	
+	<%= form_for @video, html: { multipart: true } do |f| %>
+	  <%= f.label :name %><br/>
+	  <%= f.text_field :name %><br/>
+	  <%= f.label :title %><br/>
+	  <%= f.text_field :title %><br/><br/>
+		
+	  <%= f.label "Raw Video" %>
+	  <%= f.file_field :rawvideo %><br/>
+	  	
+	  <%= f.label "Associated images" %> # notice 'multiple: true'<br/>
+	  <%= f.file_field :pictures, multiple: true, accept: "image/jpeg, image/jpg, image/gif, image/png" %>
+	  
+	  <br/><br/>	
+	  <%= f.submit "Submit" %>
+	<% end %>
 <% end %>
 
