@@ -1,7 +1,7 @@
 class VideosController < ApplicationController
   
   def index
-    
+   @videos = Video.all 
   end
   
   def new
@@ -9,6 +9,7 @@ class VideosController < ApplicationController
   end
 
   def show
+    @videos = Video.all
   end
   
   def create
@@ -28,7 +29,7 @@ class VideosController < ApplicationController
   private
    
   def video_params
-    params.require(:video).permit(:name, :title, :user_id, :rawvideo, :pictures)
+    params.require(:video).permit(:name, :title, :user_id, :rawvideo)
   end
   
 end
